@@ -272,30 +272,6 @@ pub enum Code {
     NumpadSubtract,
     /// <code class="keycap">Esc</code> or <code class="keycap">⎋</code>
     Escape,
-    /// <code class="keycap">F1</code>
-    F1,
-    /// <code class="keycap">F2</code>
-    F2,
-    /// <code class="keycap">F3</code>
-    F3,
-    /// <code class="keycap">F4</code>
-    F4,
-    /// <code class="keycap">F5</code>
-    F5,
-    /// <code class="keycap">F6</code>
-    F6,
-    /// <code class="keycap">F7</code>
-    F7,
-    /// <code class="keycap">F8</code>
-    F8,
-    /// <code class="keycap">F9</code>
-    F9,
-    /// <code class="keycap">F10</code>
-    F10,
-    /// <code class="keycap">F11</code>
-    F11,
-    /// <code class="keycap">F12</code>
-    F12,
     /// <code class="keycap">Fn</code> This is typically a hardware key that does not generate a separate
     /// code. Most keyboards do not place this key in the function section, but it is
     /// included here to keep it with related keys.
@@ -370,6 +346,76 @@ pub enum Code {
     /// This value code should be used when no other
     /// value given in this specification is appropriate.
     Unidentified,
+    /// <code class="keycap">F1</code>
+    F1,
+    /// <code class="keycap">F2</code>
+    F2,
+    /// <code class="keycap">F3</code>
+    F3,
+    /// <code class="keycap">F4</code>
+    F4,
+    /// <code class="keycap">F5</code>
+    F5,
+    /// <code class="keycap">F6</code>
+    F6,
+    /// <code class="keycap">F7</code>
+    F7,
+    /// <code class="keycap">F8</code>
+    F8,
+    /// <code class="keycap">F9</code>
+    F9,
+    /// <code class="keycap">F10</code>
+    F10,
+    /// <code class="keycap">F11</code>
+    F11,
+    /// <code class="keycap">F12</code>
+    F12,
+    /// <code class="keycap">F13</code>
+    F13,
+    /// <code class="keycap">F14</code>
+    F14,
+    /// <code class="keycap">F15</code>
+    F15,
+    /// <code class="keycap">F16</code>
+    F16,
+    /// <code class="keycap">F17</code>
+    F17,
+    /// <code class="keycap">F18</code>
+    F18,
+    /// <code class="keycap">F19</code>
+    F19,
+    /// <code class="keycap">F20</code>
+    F20,
+    /// <code class="keycap">F21</code>
+    F21,
+    /// <code class="keycap">F22</code>
+    F22,
+    /// <code class="keycap">F23</code>
+    F23,
+    /// <code class="keycap">F24</code>
+    F24,
+    /// <code class="keycap">F25</code>
+    F25,
+    /// <code class="keycap">F26</code>
+    F26,
+    /// <code class="keycap">F27</code>
+    F27,
+    /// <code class="keycap">F28</code>
+    F28,
+    /// <code class="keycap">F29</code>
+    F29,
+    /// <code class="keycap">F30</code>
+    F30,
+    /// <code class="keycap">F31</code>
+    F31,
+    /// <code class="keycap">F32</code>
+    F32,
+    /// <code class="keycap">F33</code>
+    F33,
+    /// <code class="keycap">F34</code>
+    F34,
+    /// <code class="keycap">F35</code>
+    F35,
 }
 
 
@@ -493,18 +539,6 @@ impl Display for Code {
             NumpadStar => f.write_str("NumpadStar"),
             NumpadSubtract => f.write_str("NumpadSubtract"),
             Escape => f.write_str("Escape"),
-            F1 => f.write_str("F1"),
-            F2 => f.write_str("F2"),
-            F3 => f.write_str("F3"),
-            F4 => f.write_str("F4"),
-            F5 => f.write_str("F5"),
-            F6 => f.write_str("F6"),
-            F7 => f.write_str("F7"),
-            F8 => f.write_str("F8"),
-            F9 => f.write_str("F9"),
-            F10 => f.write_str("F10"),
-            F11 => f.write_str("F11"),
-            F12 => f.write_str("F12"),
             Fn => f.write_str("Fn"),
             FnLock => f.write_str("FnLock"),
             PrintScreen => f.write_str("PrintScreen"),
@@ -550,6 +584,41 @@ impl Display for Code {
             Hiragana => f.write_str("Hiragana"),
             Katakana => f.write_str("Katakana"),
             Unidentified => f.write_str("Unidentified"),
+            F1 => f.write_str("F1"),
+            F2 => f.write_str("F2"),
+            F3 => f.write_str("F3"),
+            F4 => f.write_str("F4"),
+            F5 => f.write_str("F5"),
+            F6 => f.write_str("F6"),
+            F7 => f.write_str("F7"),
+            F8 => f.write_str("F8"),
+            F9 => f.write_str("F9"),
+            F10 => f.write_str("F10"),
+            F11 => f.write_str("F11"),
+            F12 => f.write_str("F12"),
+            F13 => f.write_str("F13"),
+            F14 => f.write_str("F14"),
+            F15 => f.write_str("F15"),
+            F16 => f.write_str("F16"),
+            F17 => f.write_str("F17"),
+            F18 => f.write_str("F18"),
+            F19 => f.write_str("F19"),
+            F20 => f.write_str("F20"),
+            F21 => f.write_str("F21"),
+            F22 => f.write_str("F22"),
+            F23 => f.write_str("F23"),
+            F24 => f.write_str("F24"),
+            F25 => f.write_str("F25"),
+            F26 => f.write_str("F26"),
+            F27 => f.write_str("F27"),
+            F28 => f.write_str("F28"),
+            F29 => f.write_str("F29"),
+            F30 => f.write_str("F30"),
+            F31 => f.write_str("F31"),
+            F32 => f.write_str("F32"),
+            F33 => f.write_str("F33"),
+            F34 => f.write_str("F34"),
+            F35 => f.write_str("F35"),
 
         }
     }

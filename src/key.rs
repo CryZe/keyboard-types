@@ -229,30 +229,6 @@ pub enum Key {
     Zenkaku,
     /// The Zenkaku/Hankaku (full-width/half-width) toggle key. (<code class="android">KEYCODE_ZENKAKU_HANKAKU</code>)
     ZenkakuHankaku,
-    /// The F1 key, a general purpose function key, as index 1.
-    F1,
-    /// The F2 key, a general purpose function key, as index 2.
-    F2,
-    /// The F3 key, a general purpose function key, as index 3.
-    F3,
-    /// The F4 key, a general purpose function key, as index 4.
-    F4,
-    /// The F5 key, a general purpose function key, as index 5.
-    F5,
-    /// The F6 key, a general purpose function key, as index 6.
-    F6,
-    /// The F7 key, a general purpose function key, as index 7.
-    F7,
-    /// The F8 key, a general purpose function key, as index 8.
-    F8,
-    /// The F9 key, a general purpose function key, as index 9.
-    F9,
-    /// The F10 key, a general purpose function key, as index 10.
-    F10,
-    /// The F11 key, a general purpose function key, as index 11.
-    F11,
-    /// The F12 key, a general purpose function key, as index 12.
-    F12,
     /// General purpose virtual function key, as index 1.
     Soft1,
     /// General purpose virtual function key, as index 2.
@@ -617,6 +593,76 @@ pub enum Key {
     Wink,
     /// Toggle between full-screen and scaled content, or alter magnification level. (<code class="vk"><code class="vk">VK_ZOOM</code></code>, <code class="android"><code class="android">KEYCODE_TV_ZOOM_MODE</code></code>)
     ZoomToggle,
+    /// The F1 key, a general purpose function key, as index 1.
+    F1,
+    /// The F2 key, a general purpose function key, as index 2.
+    F2,
+    /// The F3 key, a general purpose function key, as index 3.
+    F3,
+    /// The F4 key, a general purpose function key, as index 4.
+    F4,
+    /// The F5 key, a general purpose function key, as index 5.
+    F5,
+    /// The F6 key, a general purpose function key, as index 6.
+    F6,
+    /// The F7 key, a general purpose function key, as index 7.
+    F7,
+    /// The F8 key, a general purpose function key, as index 8.
+    F8,
+    /// The F9 key, a general purpose function key, as index 9.
+    F9,
+    /// The F10 key, a general purpose function key, as index 10.
+    F10,
+    /// The F11 key, a general purpose function key, as index 11.
+    F11,
+    /// The F12 key, a general purpose function key, as index 12.
+    F12,
+    /// The F13 key, a general purpose function key, as index 13.
+    F13,
+    /// The F14 key, a general purpose function key, as index 14.
+    F14,
+    /// The F15 key, a general purpose function key, as index 15.
+    F15,
+    /// The F16 key, a general purpose function key, as index 16.
+    F16,
+    /// The F17 key, a general purpose function key, as index 17.
+    F17,
+    /// The F18 key, a general purpose function key, as index 18.
+    F18,
+    /// The F19 key, a general purpose function key, as index 19.
+    F19,
+    /// The F20 key, a general purpose function key, as index 20.
+    F20,
+    /// The F21 key, a general purpose function key, as index 21.
+    F21,
+    /// The F22 key, a general purpose function key, as index 22.
+    F22,
+    /// The F23 key, a general purpose function key, as index 23.
+    F23,
+    /// The F24 key, a general purpose function key, as index 24.
+    F24,
+    /// The F25 key, a general purpose function key, as index 25.
+    F25,
+    /// The F26 key, a general purpose function key, as index 26.
+    F26,
+    /// The F27 key, a general purpose function key, as index 27.
+    F27,
+    /// The F28 key, a general purpose function key, as index 28.
+    F28,
+    /// The F29 key, a general purpose function key, as index 29.
+    F29,
+    /// The F30 key, a general purpose function key, as index 30.
+    F30,
+    /// The F31 key, a general purpose function key, as index 31.
+    F31,
+    /// The F32 key, a general purpose function key, as index 32.
+    F32,
+    /// The F33 key, a general purpose function key, as index 33.
+    F33,
+    /// The F34 key, a general purpose function key, as index 34.
+    F34,
+    /// The F35 key, a general purpose function key, as index 35.
+    F35,
 }
 
 
@@ -718,18 +764,6 @@ impl Display for Key {
             Romaji => f.write_str("Romaji"),
             Zenkaku => f.write_str("Zenkaku"),
             ZenkakuHankaku => f.write_str("ZenkakuHankaku"),
-            F1 => f.write_str("F1"),
-            F2 => f.write_str("F2"),
-            F3 => f.write_str("F3"),
-            F4 => f.write_str("F4"),
-            F5 => f.write_str("F5"),
-            F6 => f.write_str("F6"),
-            F7 => f.write_str("F7"),
-            F8 => f.write_str("F8"),
-            F9 => f.write_str("F9"),
-            F10 => f.write_str("F10"),
-            F11 => f.write_str("F11"),
-            F12 => f.write_str("F12"),
             Soft1 => f.write_str("Soft1"),
             Soft2 => f.write_str("Soft2"),
             Soft3 => f.write_str("Soft3"),
@@ -910,6 +944,41 @@ impl Display for Key {
             VideoModeNext => f.write_str("VideoModeNext"),
             Wink => f.write_str("Wink"),
             ZoomToggle => f.write_str("ZoomToggle"),
+            F1 => f.write_str("F1"),
+            F2 => f.write_str("F2"),
+            F3 => f.write_str("F3"),
+            F4 => f.write_str("F4"),
+            F5 => f.write_str("F5"),
+            F6 => f.write_str("F6"),
+            F7 => f.write_str("F7"),
+            F8 => f.write_str("F8"),
+            F9 => f.write_str("F9"),
+            F10 => f.write_str("F10"),
+            F11 => f.write_str("F11"),
+            F12 => f.write_str("F12"),
+            F13 => f.write_str("F13"),
+            F14 => f.write_str("F14"),
+            F15 => f.write_str("F15"),
+            F16 => f.write_str("F16"),
+            F17 => f.write_str("F17"),
+            F18 => f.write_str("F18"),
+            F19 => f.write_str("F19"),
+            F20 => f.write_str("F20"),
+            F21 => f.write_str("F21"),
+            F22 => f.write_str("F22"),
+            F23 => f.write_str("F23"),
+            F24 => f.write_str("F24"),
+            F25 => f.write_str("F25"),
+            F26 => f.write_str("F26"),
+            F27 => f.write_str("F27"),
+            F28 => f.write_str("F28"),
+            F29 => f.write_str("F29"),
+            F30 => f.write_str("F30"),
+            F31 => f.write_str("F31"),
+            F32 => f.write_str("F32"),
+            F33 => f.write_str("F33"),
+            F34 => f.write_str("F34"),
+            F35 => f.write_str("F35"),
 
         }
     }
@@ -1014,18 +1083,6 @@ impl FromStr for Key {
             "Romaji" => Ok(Romaji),
             "Zenkaku" => Ok(Zenkaku),
             "ZenkakuHankaku" => Ok(ZenkakuHankaku),
-            "F1" => Ok(F1),
-            "F2" => Ok(F2),
-            "F3" => Ok(F3),
-            "F4" => Ok(F4),
-            "F5" => Ok(F5),
-            "F6" => Ok(F6),
-            "F7" => Ok(F7),
-            "F8" => Ok(F8),
-            "F9" => Ok(F9),
-            "F10" => Ok(F10),
-            "F11" => Ok(F11),
-            "F12" => Ok(F12),
             "Soft1" => Ok(Soft1),
             "Soft2" => Ok(Soft2),
             "Soft3" => Ok(Soft3),
@@ -1206,6 +1263,41 @@ impl FromStr for Key {
             "VideoModeNext" => Ok(VideoModeNext),
             "Wink" => Ok(Wink),
             "ZoomToggle" => Ok(ZoomToggle),
+            "F1" => Ok(F1),
+            "F2" => Ok(F2),
+            "F3" => Ok(F3),
+            "F4" => Ok(F4),
+            "F5" => Ok(F5),
+            "F6" => Ok(F6),
+            "F7" => Ok(F7),
+            "F8" => Ok(F8),
+            "F9" => Ok(F9),
+            "F10" => Ok(F10),
+            "F11" => Ok(F11),
+            "F12" => Ok(F12),
+            "F13" => Ok(F13),
+            "F14" => Ok(F14),
+            "F15" => Ok(F15),
+            "F16" => Ok(F16),
+            "F17" => Ok(F17),
+            "F18" => Ok(F18),
+            "F19" => Ok(F19),
+            "F20" => Ok(F20),
+            "F21" => Ok(F21),
+            "F22" => Ok(F22),
+            "F23" => Ok(F23),
+            "F24" => Ok(F24),
+            "F25" => Ok(F25),
+            "F26" => Ok(F26),
+            "F27" => Ok(F27),
+            "F28" => Ok(F28),
+            "F29" => Ok(F29),
+            "F30" => Ok(F30),
+            "F31" => Ok(F31),
+            "F32" => Ok(F32),
+            "F33" => Ok(F33),
+            "F34" => Ok(F34),
+            "F35" => Ok(F35),
 
             _ => Err(UnrecognizedKeyError),
         }

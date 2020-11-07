@@ -4,6 +4,9 @@ import requests
 def handle_enum_entries(text, file):
     display = []
     for match in re.findall(r"id=\".*?\">\"(.*?)\"</code>\n.*<td>(((.*?)\n)+?)\s+(<tr>|</table>)", text):
+        # Skip F keys here
+        if re.match("^F\d+$", match[0]):
+            continue
         doc = re.sub(r"[ \t][ \t]+", "\n", match[1])
         doc = re.sub(r"<a .*?>(.*?)</a>", "\\1", doc)
         for line in doc.split('\n'):
@@ -22,6 +25,13 @@ def print_display_entries(display, file):
 def print_from_str_entries(display, file):
     for key in display:
         print("            \"{0}\" => Ok({0}),".format(key), file=file)
+
+
+def add_f_keys(display, file, max_f_key, doc_comment):
+    for index in range(1, max_f_key + 1):
+        print("    ///", doc_comment.format(index), file=file)
+        print("    F{},".format(index), file=file)
+        display.append("F{}".format(index))
 
 def convert_key(text, file):
     print("""
@@ -45,6 +55,7 @@ pub enum Key {
     Character(String),
     """, file=file)
     display = handle_enum_entries(text, file)
+    add_f_keys(display, file, 35, "The F{0} key, a general purpose function key, as index {0}.")
     print("}", file=file)
 
     print("""
@@ -127,6 +138,7 @@ use std::fmt::{self, Display};
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub enum Code {""", file=file)
     display = handle_enum_entries(text, file)
+    add_f_keys(display, file, 35, "<code class=\"keycap\">F{0}</code>")
     print("}", file=file)
 
     print("""
