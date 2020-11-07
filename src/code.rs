@@ -11,6 +11,7 @@ use std::fmt::{self, Display};
 ///
 /// Specification:
 /// <https://w3c.github.io/uievents-code/>
+#[non_exhaustive]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub enum Code {
@@ -369,11 +370,7 @@ pub enum Code {
     /// This value code should be used when no other
     /// value given in this specification is appropriate.
     Unidentified,
-
-    #[doc(hidden)]
-    __Nonexhaustive,
 }
-    
 
 
 impl Display for Code {
@@ -554,7 +551,6 @@ impl Display for Code {
             Katakana => f.write_str("Katakana"),
             Unidentified => f.write_str("Unidentified"),
 
-            __Nonexhaustive => unreachable!(),
         }
     }
 } 

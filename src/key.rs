@@ -9,6 +9,7 @@ use std::error::Error;
 ///
 /// Specification:
 /// <https://w3c.github.io/uievents-key/>
+#[non_exhaustive]
 #[derive(Clone, Debug, Eq, PartialEq, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub enum Key {
@@ -616,11 +617,7 @@ pub enum Key {
     Wink,
     /// Toggle between full-screen and scaled content, or alter magnification level. (<code class="vk"><code class="vk">VK_ZOOM</code></code>, <code class="android"><code class="android">KEYCODE_TV_ZOOM_MODE</code></code>)
     ZoomToggle,
-
-    #[doc(hidden)]
-    __Nonexhaustive,
 }
-    
 
 
 impl Display for Key {
@@ -914,7 +911,6 @@ impl Display for Key {
             Wink => f.write_str("Wink"),
             ZoomToggle => f.write_str("ZoomToggle"),
 
-            __Nonexhaustive => unreachable!(),
         }
     }
 }

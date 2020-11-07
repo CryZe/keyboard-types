@@ -35,6 +35,7 @@ use std::error::Error;
 ///
 /// Specification:
 /// <https://w3c.github.io/uievents-key/>
+#[non_exhaustive]
 #[derive(Clone, Debug, Eq, PartialEq, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub enum Key {
@@ -44,11 +45,7 @@ pub enum Key {
     Character(String),
     """, file=file)
     display = handle_enum_entries(text, file)
-    print("""
-    #[doc(hidden)]
-    __Nonexhaustive,
-}
-    """, file=file)
+    print("}", file=file)
 
     print("""
 
@@ -60,7 +57,6 @@ impl Display for Key {
     """, file=file)
     print_display_entries(display, file)
     print("""
-            __Nonexhaustive => unreachable!(),
         }
     }
 }
@@ -126,15 +122,12 @@ use std::fmt::{self, Display};
 ///
 /// Specification:
 /// <https://w3c.github.io/uievents-code/>
+#[non_exhaustive]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub enum Code {""", file=file)
     display = handle_enum_entries(text, file)
-    print("""
-    #[doc(hidden)]
-    __Nonexhaustive,
-}
-    """, file=file)
+    print("}", file=file)
 
     print("""
 
@@ -145,7 +138,6 @@ impl Display for Code {
     """, file=file)
     print_display_entries(display, file)
     print("""
-            __Nonexhaustive => unreachable!(),
         }
     }
 } 
